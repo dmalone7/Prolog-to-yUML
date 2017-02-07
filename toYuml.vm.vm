@@ -1,11 +1,15 @@
 #set($MARKER="//----")
 ${MARKER}${OutputFileName}
 
-#foreach($class in $bcClassS)
-   class ${class.name} extends ${class.super};
+#foreach($class in $violetClassS)
+   class ${class.name} extends ${class.fields};
 #end
 
 
-#foreach($m in $bcMemberS)
-   ${m.typeName}${m.arrQual} ${m.signature};
+#foreach($interface in $violetInterfaceS)
+   ${interface.name} ${interface.methods};
+#end
+
+#foreach($assoc in $violetAssociationS)
+   ${assoc.role1} ${assoc.arrow1} ${assoc.type1}
 #end
