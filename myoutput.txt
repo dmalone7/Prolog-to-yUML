@@ -1,9 +1,9 @@
 
-   class class extends ;
-   class student extends ;
-   class grade extends score;
+[Attribute|name;key|];
+[Entity|name|];
+[Relationship|name|];
 
 
 
-   *  classnode
-   *  classnode
+[Attribute]* hasAttr-1 belongsTo[Entity]
+[Entity]2..* participant-* participates[Relationship]
