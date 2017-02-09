@@ -9,7 +9,6 @@ ${MARKER}${OutputFileName}
 [Interface;${i.name}|${i.methods}];
 #end
 
-
 #foreach($a in $violetAssociationS)
 [#foreach($class in $violetClassS)#if(${a.cid1} == ${class.id})${class.name}#end#end#foreach($i in $violetInterfaceS)#if(${a.cid1} == ${i.id})Interface;${i.name}#end#end]#if(${a.arrow1} == "TRIANGLE")^#end#if(${a.arrow1} == "V")<#end#if(${a.arrow1} == "DIAMOND")<>#end#if(${a.arrow1} == "BLACK_DIAMOND")++#end${a.role1}#if(${a.lineStyle} == "DOTTED")-.-#else-#end${a.role2}#if(${a.arrow2} == "TRIANGLE")^#end#if(${a.arrow2} == "V")<#end#if(${a.arrow2} == "DIAMOND")<>#end#if(${a.arrow2} == "BLACK_DIAMOND")++#end[#foreach($class in $violetClassS)#if(${a.cid2} == ${class.id})${class.name}#end#end#foreach($i in $violetInterfaceS)#if(${a.cid2} == ${i.id})Interface;${i.name}#end#end]
 #end
